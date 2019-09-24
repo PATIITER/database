@@ -1,0 +1,7 @@
+{
+  "name": "databaseproject",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}

@@ -1,0 +1,76 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Data Customer</ion-title>
+    <ion-button slot="primary" (click)="addcustomer()">
+        New
+        <ion-icon slot="end"name="add"></ion-icon>
+    </ion-button>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    
+    <ion-row>
+        <ion-col>
+          <ion-label>
+            Name
+          </ion-label>
+        </ion-col>
+
+        <ion-col>
+            <ion-label>
+              Tel
+            </ion-label>
+          </ion-col>
+
+          <ion-col>
+              <ion-label>
+                Email
+              </ion-label>
+            </ion-col>
+
+            <ion-col>
+              <ion-label>
+                Detail
+              </ion-label>
+            </ion-col>
+
+            <ion-col>
+              <ion-label>
+                Edit
+              </ion-label>
+            </ion-col>
+    </ion-row>
+   
+<ion-row *ngFor="let a of listcustomer">
+        <ion-col>
+          <ion-label>
+            {{a.name_customer}}
+          </ion-label>
+        </ion-col>
+    
+        <ion-col>
+          <ion-label>
+            {{a.tel}}
+          </ion-label>
+        </ion-col>
+
+        <ion-col>
+          <ion-label>
+            {{a.email}}
+          </ion-label>
+        </ion-col>
+
+        <ion-col>
+         <ion-button (click)="goDetail(item.name_customer)" size ="small">
+           <ion-icon slot="icon-only" name ="star"></ion-icon>
+         </ion-button>
+        </ion-col>
+
+        <ion-col>
+          <ion-button (click)="goEditcustomer(item.name_customer)" size ="small">
+            <ion-icon slot="icon-only" name ="list"></ion-icon>
+          </ion-button>
+         </ion-col>
+        </ion-row>
+</ion-content>
